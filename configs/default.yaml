@@ -1,0 +1,25 @@
+device: auto
+weights_dir: models/weights
+cache_dir: data/mesh_cache
+
+diffusion:
+  model_id: stabilityai/sd-turbo
+  text_dim: 1024
+  steps: 64
+  guidance: 7.5
+  image_size: 512
+
+triplane:
+  channels: 32
+  resolution: 128
+  num_planes: 3
+
+decoder:
+  hidden_dim: 256
+  num_layers: 6
+  iso_surface: 0.0
+
+export:
+  format: glb
+  decimate_ratio: 1.0
+  smooth_iterations: 0
