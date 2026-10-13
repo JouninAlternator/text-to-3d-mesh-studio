@@ -1,0 +1,25 @@
+device: cuda
+weights_dir: models/weights
+cache_dir: data/mesh_cache
+
+diffusion:
+  model_id: stabilityai/sd-turbo
+  text_dim: 1024
+  steps: 32
+  guidance: 7.0
+  image_size: 384
+
+triplane:
+  channels: 24
+  resolution: 96
+  num_planes: 3
+
+decoder:
+  hidden_dim: 192
+  num_layers: 5
+  iso_surface: 0.0
+
+export:
+  format: glb
+  decimate_ratio: 0.7
+  smooth_iterations: 2
